@@ -1,0 +1,2 @@
+cleos -u http://api.eosnewyork.io set account permission stablequan11 newperiod EOS7g2WNsM6Ryqohois1qpi41jzvxoFPAxKanTKcZP5B7jZ35nrju active -p stablequan11@owner
+cleos -u http://api.eosnewyork.io set action permission stablequan11 daccustodia1 newperiod newperiod -p stablequan11@owner
