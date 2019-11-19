@@ -22,17 +22,19 @@ const action = {
     data: {'message':'Automated newperiod'}
 };
 
+const message = 'VIGOR DAC daily new period has started (courtesy of @prc.eos candidate). Thanks to all candidates who are building. VIG is ready to claim at vigor.ai';
+
 const do_newperiod = async () => {
     try {
         const res = await api.transact({actions:[action]}, {blocksBehind: 3, expireSeconds: 30});
 
         console.log(res);
         // newperiod succeeded, send message to telegram bot
-        if (config.bot_apiurl && config.bot_apikey){
-            setTimeout(()=>{fetch(`${config.bot_apiurl}${config.bot_apikey}/sendMessage?chat_id=-1001266273284&text=VIGOR DAC daily newperiod has begun. Thankyou to all candidates who are building. VIG is ready to claim at vigor.ai`)}, 6000 );
+        if (config.bot_apiurl && config.bot_apikey){      // VIGORgov Telegram group
+            setTimeout(()=>{fetch(`${config.bot_apiurl}${config.bot_apikey}/sendMessage?chat_id=-1001266273284&text=${message}`)}, 6000 );
         }
-        if (config.bot_apiurl && config.bot2_apikey){
-            setTimeout(()=>{fetch(`${config.bot_apiurl}${config.bot2_apikey}/sendMessage?chat_id=-1001216989023&text=VIGOR DAC daily newperiod has begun. Thankyou to all candidates who are building. VIG is ready to claim at vigor.ai`)}, 6000 );
+        if (config.bot_apiurl && config.bot2_apikey){     // VIGOR Telegram group
+            setTimeout(()=>{fetch(`${config.bot_apiurl}${config.bot2_apikey}/sendMessage?chat_id=-1001216989023&text=${message}`)}, 6000 );
         }
     }
     catch (e){
