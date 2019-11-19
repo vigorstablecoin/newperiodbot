@@ -1,0 +1,13 @@
+[Unit]
+Description=New period bot (vigor) daemon
+After=network.target
+
+[Service]
+Type=simple
+User=vigor
+WorkingDirectory=/home/vigor/newperiodbot/
+ExecStart=/home/vigor/newperiodbot/newperiodbot
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
