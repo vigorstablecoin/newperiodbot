@@ -22,7 +22,7 @@ const action = {
     data: {'message':'Automated newperiod'}
 };
 
-const message = 'VIGOR DAC daily new period has started (courtesy of @prc.eos candidate). Thanks to all candidates who are building. VIG is ready to claim at vigor.ai';
+const message = `VIGOR DAC daily new period has started (courtesy of @${config.auth_user} candidate). Thanks to all candidates who are building. VIG is ready to claim at vigor.ai`;
 
 const do_newperiod = async () => {
     try {
