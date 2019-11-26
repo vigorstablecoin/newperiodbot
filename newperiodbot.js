@@ -28,9 +28,9 @@ const do_newperiod = async () => {
   try {
     const res = await api.transact({actions:[action]}, {blocksBehind: 3, expireSeconds: 30});
 
-    console.log('Action', config.action, 'executed');
+    console.log('Action', config.action, 'executed successfully');
     // newperiod succeeded, send messages to telegram if configured
-    setTimeout(do_telegram, 6000 );
+    setImmediate(do_telegram);
   }
   catch (e){
     switch (e.json.error.code) {
@@ -70,7 +70,7 @@ const do_telegram = () => {
         .then(res => res.json())
         .then(json => {
           if (json.ok) {
-            console.log('Message to chat', chat, 'sent successfuly');
+            console.log('Message to chat', chat, 'sent successfully');
           } else {
             console.log('Error sending message to chat', chat + ':', json);
           }
@@ -84,5 +84,4 @@ const do_telegram = () => {
 }
 
 setInterval(do_newperiod, config.intervals.execute);
-
-do_newperiod();
+setImmediate(do_newperiod);
