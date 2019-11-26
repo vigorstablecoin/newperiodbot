@@ -1,0 +1,32 @@
+{
+  "private_key": "5.....",
+  "endpoints": [
+    "https://api.eosnewyork.io",
+    "https://api.eosdetroit.io",
+    "https://eos.greymass.com",
+    "https://fn.eossweden.se",
+    "https://api.main.alohaeos.com"
+  ],
+  "contract": "daccustodia1",
+  "action": "newperiod",
+  "auth": {
+    "user": "stablequan11",
+    "perm": "newperiod"
+  },
+  "intervals": {
+    "execute": 3600000,
+    "retry": 10000
+  },
+  "messages": {
+    "action": "Automated newperiod by @%s",
+    "telegram": "VIGOR DAC daily new period started (executed by @%s). Thanks to all candidates who are building. VIG is ready to claim at vigor.ai..."
+  },
+  "telegram": {
+    "apiurl": "https://api.telegram.org/bot",
+    "apikey": "...",
+    "chats": {
+      "VIGORgov": "-1001266273284",
+      "VIGOR": "-1001216989023"
+    }
+  }
+}
