@@ -1,0 +1,16 @@
+{
+    "private_key": "5.....",
+    "endpoints": [
+      "https://api.eosnewyork.io",
+      "https://api.eosdetroit.io",
+      "https://eos.greymass.com",
+      "https://fn.eossweden.se",
+      "https://api.main.alohaeos.com",
+    ],
+    "contract": "daccustodia1",
+    "auth_user": "stablequan11",
+    "auth_perm": "newperiod",
+    "bot_apikey": "8...",
+    "bot_apiurl": "https://api.telegram.org/bot",
+    "bot2_apikey": "8...."
+}

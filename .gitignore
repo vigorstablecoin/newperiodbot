@@ -19,6 +19,6 @@ yarn-error.log*
 yarn.lock
 package-lock.json
 
-# config.js may contain private information, so we ignore it, only store a
+# config.json contains sensitive information, so we ignore it, only store a
 # sample for reference
-config.js
+config.json
